@@ -1,0 +1,74 @@
+Fazer um versionamento correto no GitHub e nomear as versões do seu projeto são práticas importantes para manter um histórico organizado e permitir o rastreamento eficiente das mudanças no seu código. Vou te orientar em como versionar seu código corretamente e nomear as versões.
+
+1. Versionamento Semântico (Semantic Versioning)
+Uma prática comum é usar o versionamento semântico, que segue o formato MAJOR.MINOR.PATCH, onde:
+
+MAJOR (Versão Principal): Incrementa quando você faz mudanças incompatíveis com versões anteriores (ex.: 1.0.0 → 2.0.0).
+MINOR (Versão Menor): Incrementa quando você adiciona funcionalidades de forma compatível com versões anteriores (ex.: 1.0.0 → 1.1.0).
+PATCH (Correção de Bug): Incrementa quando você faz correções de bugs de forma compatível com versões anteriores (ex.: 1.0.0 → 1.0.1).
+Exemplo de Nomeação de Versões:
+
+v1.0.0: Primeira versão oficial do projeto.
+v1.1.0: Adição de novas funcionalidades.
+v1.1.1: Correção de bugs na versão 1.1.0.
+2. Criando e Nomeando Versões no GitHub
+Aqui está o passo a passo de como criar e nomear versões no GitHub:
+
+a. Criando uma Tag Localmente
+Faça commit das mudanças que você deseja incluir na nova versão:
+
+bash
+Copiar código
+git add .
+git commit -m "Descrição das mudanças na versão"
+Crie uma tag para a nova versão:
+
+bash
+Copiar código
+git tag -a v1.0.0 -m "Primeira versão oficial"
+A opção -a cria uma tag anotada, o que significa que ela será armazenada no histórico do Git, incluindo a mensagem que você fornece com a opção -m.
+Envie a tag para o GitHub:
+
+bash
+Copiar código
+git push origin v1.0.0
+b. Criando e Nomeando Versões no GitHub (via Interface Gráfica)
+Acesse o repositório no GitHub.
+Vá para a aba "Releases".
+Clique em "Draft a new release".
+Preencha o campo "Tag version" (ex.: v1.0.0).
+Dê um título e uma descrição para a release.
+Clique em "Publish release".
+3. Boas Práticas de Versionamento
+Commit Pequenos e Frequentes: Commits pequenos facilitam o rastreamento das mudanças.
+Mensagens Claras de Commit: Escreva mensagens de commit descritivas e precisas.
+Documente as Mudanças: Sempre mantenha um arquivo CHANGELOG.md para documentar as mudanças feitas em cada versão.
+Branches Claros: Use branches de features (feature/xyz), de correções (fix/xyz) e de release (release/v1.0.0) para organizar seu trabalho.
+Exemplo de Uso do CHANGELOG.md
+markdown
+Copiar código
+# Changelog
+
+## [v1.1.0] - 2024-08-30
+### Added
+- Nova funcionalidade X foi adicionada.
+
+### Fixed
+- Corrigido o bug Y que ocorria ao fazer Z.
+
+## [v1.0.0] - 2024-08-20
+### Added
+- Primeira versão oficial do projeto.
+4. Branching Model (Modelo de Ramificação)
+Muitos desenvolvedores seguem o modelo de ramificação Git Flow, que inclui:
+
+main branch: Contém o código em produção.
+develop branch: Contém o código de desenvolvimento.
+feature branches: Para desenvolvimento de novas funcionalidades.
+release branches: Preparação de uma nova versão.
+hotfix branches: Para correções rápidas em produção.
+Resumo
+Siga o versionamento semântico para nomear suas versões.
+Crie tags e releases para marcar versões significativas do seu projeto no GitHub.
+Utilize boas práticas no Git e mantenha seu repositório bem documentado.
+Seguindo essas orientações, você terá um repositório bem organizado, facilitando o trabalho em equipe e o gerenciamento de versões do seu projeto!
